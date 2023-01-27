@@ -8,7 +8,7 @@
 
 ## Introduction
 
-So far, we have seen the `char` data type reference in passing, and we know it
+So far, we have seen the `char` data type  in passing, and we know it
 stores a single character or ASCII value, but we really haven't used it or
 talked too in-depth about it. In this section, we will explore characters some
 more, talk about what an ASCII value is, point out a few special characters,
@@ -73,7 +73,7 @@ storing the character 'A':
 
 The debugger view is interesting because it shows both the character 'A' and the decimal
 value 65.  Keep in mind the actual value stored in memory is a single binary number
-representing of the decimal value 65.
+representing the decimal value 65.
 
 ![debugger character A](https://curriculum-content.s3.amazonaws.com/6676/java-mod2-strings/char_decimal_debugger.png)
 
@@ -133,7 +133,7 @@ public static void main(String[] args) {
 
 ```java
 public static void main(String[] args) {
-    for (char c=70; c<74; c++){
+    for (char c = 70; c < 74; c++){
         System.out.println(c);
     }
 }
@@ -178,8 +178,8 @@ Output:
 
 Notice how the backslashes are not printed but the double quote immediately
 following the backslash is printed. This is because the escape character
-notifies Java that we are to print the escape sequence instead that results in
-just a double quotation mark. Java also treats the escape sequence as one
+notifies Java that we are to print the escape sequence instead. This results in
+just printing the double quotation mark. Java also treats the escape sequence as one
 character - meaning `\"` would be considered one character, not two.
 
 Consider the table of escape sequences:
@@ -206,7 +206,7 @@ System.out.println(secondString);
 
 Output:
 
-```plaintext
+```text
 Hello   World!
 What a beautiful
 day!
@@ -240,9 +240,12 @@ In Java, there are a few differences between a `String` and a `char[]`:
    Since it is an array, we can
    change the element at a particular position in the array. For example, we can
    reassign the first element as `grades[0] = 'Z'`;
-2. A `String` is an immutable type whereas a `char[]` is still mutable.
-   We can't change any of the characters stored in a string, we would need to create an
-   entirely new string.
+2. An object is considered *immutable* if its state cannot change after it is constructed.
+   A `String` is an immutable type, whereas a `char[]` is still mutable.
+   - We can't change the characters stored in a string once it has been created. We would need to create an
+     entirely new string if we want to store a different character sequence.
+   - We can use indexing to change the characters stored in an array,
+     as long as the index remains within bounds of the array size.
 3. We can use a `+` to concatenate two `String` values together but cannot do
    the same for a character array.
 4. The `String` class has built-in methods that we will cover in the next couple
