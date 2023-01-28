@@ -36,6 +36,13 @@ letters. This means that 'A' would not be the same as 'a' in Java!
 
 [Medium: ASCII Table in Java Programming](https://medium.com/@aidafarihabaharunsuratman/did-someone-actually-use-ascii-table-in-java-programming-9710a65c6ed9)
 
+It may seem a bit odd to assign decimal values to each character, i.e. why is
+it important that 'A' is 65 and 'B' is 66? Consider
+as a programmer how you could use this to sort strings in alphabetic order.
+While children learn to memorize the order of letters in an alphabet, a
+computer only knows how to compare two values based on their binary representation.
+This requires every character to be assigned a decimal value so that is it
+numerically comparable to other characters.
 
 Let's consider our example again: `char grade = 'A';` We can see in the ASCII
 table that the character 'A' has a decimal value of 65. Does this mean, that if
